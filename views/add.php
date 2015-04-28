@@ -1,18 +1,17 @@
-<?php
-
-?>
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
     <meta charset="UTF-8">
-    <title>Новости</title>
+    <title>Новая новость</title>
 </HEAD>
 <BODY>
-<h1 align="center">Новости дня</h1>
-<?php foreach($articles as $article): ?>
-    <a href = "/article.php?id=<?php echo $article['id']; ?>"
-<h2><?php echo $article['name']; ?></h2> </a>
-    <p><?php echo $article['content']; ?></p>
-<?php endforeach; ?>
+<h1 align="center">Форма для добавления новости</h1>
+<form action = "add.php" method = "post">
+    <label for = "name">Заголовок:</label>
+    <input type = "text" name = "name" id = "name"><br>
+    <label for = "content">Содержание новости:</label>
+    <input type = "text" name = "content" id="content">
+    <input type = "submit" value = "Добавить">
+</form>
 </BODY>
 </HTML>

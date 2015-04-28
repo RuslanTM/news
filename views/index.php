@@ -5,9 +5,10 @@
     <title>Новости</title>
 </HEAD>
 <BODY>
-<h1 align="center">Новостная лента</h1>
+<h1 align="center">Новости дня</h1>
 <?php foreach($articles as $article): ?>
-<h2><?php echo $article['name']; ?></h2>
+    <a href = "/article.php?id=<?php echo $article['id']; ?>"
+<h2><?php echo $article['name']; ?></h2> </a>
     <p><?php echo $article['content']; ?></p>
 <?php endforeach; ?>
 </BODY>
