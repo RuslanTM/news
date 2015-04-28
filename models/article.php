@@ -8,6 +8,12 @@ function article_getAll()
     return $articles;
 }
 
+function article_getLastArticles()
+{
+    $sql = "SELECT * FROM article ORDER BY publication_date DESC";
+    $articles = Sql_query($sql);
+    return $articles;
+}
 function article_getArticle($id){
 	$sql = "SELECT * FROM article WHERE id=" .$id;
 	$article = Sql_query($sql);
